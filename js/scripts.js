@@ -46,6 +46,7 @@ const questions = [
 const questionElement = document.querySelector("#question")
 const choiceElements = document.querySelectorAll(".choice")
 const nextButton = document.querySelector("#next")
+const restartButton = document.querySelector("#restart")
 const scoreElement = document.querySelector("#score")
 const wrongElement = document.querySelector("#wrong")
 
@@ -123,6 +124,10 @@ nextButton.addEventListener("click", () => {
         alert(`Fim de jogo! Você acertou ${score} de ${questions.length} perguntas!`)
         restartQuiz()
     }
+})
+
+restartButton.addEventListener("click", () => {
+  restartQuiz()
 })
 
 function restartQuiz() {
